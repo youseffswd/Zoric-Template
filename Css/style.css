@@ -62,11 +62,7 @@ a {
         max-width: 1140px;
     }
 }
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-}
+
 #loader {
     width: 100%;
     height: 100vh;
@@ -122,6 +118,8 @@ a {
 .main-heading {
     text-align: center;
     margin-bottom: 50px;
+    width: 100%;
+    padding: 0 10px;
 }
 .main-heading span {
     font-size: 15px;
@@ -130,8 +128,13 @@ a {
 }
 .main-heading h2 {
     color: var(--heading-color);
-    font-size: 27px;
+    font-size: 22px;
     margin-top: 10px;
+}
+@media (min-width: 576px) {
+    .main-heading h2 {
+        font-size: 27px;
+    }
 }
 span.custom-border {
     display: block;
@@ -379,7 +382,7 @@ header nav ul li a:hover {
 .wave {
     position: absolute;
     height: 70px;
-    width: 100%;
+    width: calc(100% - 8px);
     background: #f8f7ff;
     bottom: 0;
     /* transform: translateY(100%); */
@@ -617,12 +620,14 @@ header nav ul li a:hover {
 }
 .achievments .content .content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 40px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .achievments .content .content-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 30px;
     }
 }
@@ -897,6 +902,7 @@ header nav ul li a:hover {
 }
 .prices .box {
     background-color: #fff;
+    min-height: 570px;
     padding: 40px;
     text-align: center;
     transition: var(--main-transition);
