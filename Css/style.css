@@ -825,15 +825,21 @@ header nav ul li a:hover {
     pointer-events: none;
 }
 .portfolio .filter-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
     min-height: 505px;
 }
-.portfolio .filter-container .image {
-    position: relative;
-    overflow: hidden;
+.portfolio .filter-container .mix{
+    flex-basis: 250px;
+    transition: .3s all ease-in-out;
+}
+.portfolio .filter-container .mix.shrink{
+    transform: translateX(-100px) scale(0);
+    flex-basis: 0px;
+    opacity: 0;
+    margin: -1px;
 }
 .portfolio .filter-container .image .info {
     position: absolute;
