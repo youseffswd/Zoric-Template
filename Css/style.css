@@ -829,17 +829,22 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
-    min-height: 505px;
 }
 .portfolio .filter-container .mix{
-    flex-basis: 250px;
+    flex:0 250px;
+    transform: translateX(-0px) scale(1);
+    opacity: 1;
     transition: .3s all ease-in-out;
 }
 .portfolio .filter-container .mix.shrink{
     transform: translateX(-100px) scale(0);
-    flex-basis: 0px;
+    flex:0 0px;
     opacity: 0;
     margin: -1px;
+}
+.portfolio .filter-container .image{
+    position: relative;
+    overflow: hidden;
 }
 .portfolio .filter-container .image .info {
     position: absolute;
